@@ -2,7 +2,7 @@
  * @Author: lh@metgs.com
  * @Date: 2022-01-17 14:37:35
  * @LastEditors: lh@metgs.com
- * @LastEditTime: 2022-01-25 16:06:50
+ * @LastEditTime: 2022-01-25 16:15:54
  * @Description: ...
  */
 import { createRouter, createWebHistory } from 'vue-router'
@@ -11,8 +11,8 @@ const routes = [
   {
     path: '/',
     name: 'Index',
-    component: () => import(/* webpackChunkName: "Index" */'@/views/index/Index'),
-    meta: { title: '首页', icon: 'MessageBox', affix: true, tags: true }
+    component: () => import(/* webpackChunkName: "Index" */'@/views/index/Index')
+    // meta: { title: '首页', icon: 'MessageBox', affix: true, tags: true }
   },
   {
     path: '/home',
