@@ -1,12 +1,11 @@
+<!--
+ * @Author: lh@metgs.com
+ * @Date: 2022-01-17 14:37:35
+ * @LastEditors: lh@metgs.com
+ * @LastEditTime: 2022-01-25 15:30:08
+ * @Description: ...
+-->
 <template>
-  <div id="nav">
-    <router-link to="/">
-      Home
-    </router-link> |
-    <router-link to="/about">
-      About
-    </router-link>
-  </div>
   <router-view>
   </router-view>
 </template>

@@ -2,16 +2,22 @@
  * @Author: lh@metgs.com
  * @Date: 2021-12-06 11:29:39
  * @LastEditors: lh@metgs.com
- * @LastEditTime: 2021-12-06 11:47:02
+ * @LastEditTime: 2022-01-17 14:41:35
  * @Description: ...
  */
 import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
-    name: 'Eduardo',
-    isAdmin: true
-  })
+    accessToken: '',
+    refreshToken: '',
+    role: null
+  }),
+  actions: {
+    setRole (role) {
+      this.role = role
+    }
+  }
 })
 
 // if (import.meta.hot) {

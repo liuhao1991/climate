@@ -1,0 +1,246 @@
+@import "./feature.less";
+.flex {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-c {
+  .flex();
+  align-items: center;
+}
+
+.flex-s {
+  .flex();
+  align-items: stretch;
+}
+
+.flex-a-end {
+  .flex();
+  align-items: flex-end;
+}
+.flex-a-start {
+  .flex();
+  align-items: flex-start;
+}
+
+.flex-start {
+  .flex();
+  justify-content: flex-start;
+}
+.flex-end {
+  .flex();
+  justify-content: flex-end;
+}
+.flex-center {
+  .flex();
+  justify-content: center;
+}
+.flex-jcsb {
+  .flex();
+  justify-content: space-between;
+}
+.flex-jcsa {
+  .flex();
+  justify-content: space-around;
+}
+
+.flex-start-c {
+  .flex-start();
+  .flex-c();
+}
+.flex-end-c {
+  .flex-end();
+  .flex-c();
+}
+.flex-center-c {
+  .flex-center();
+  .flex-c();
+}
+.flex-jcsb-c {
+  .flex-jcsb();
+  .flex-c();
+}
+.flex-jcsa-c {
+  .flex-jcsa();
+  .flex-c();
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.block {
+  display: block;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.in-block {
+  display: inline-block;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.tc {
+  text-align: center !important;
+}
+
+.tl {
+  text-align: left !important;
+}
+
+.tr {
+  text-align: right !important;
+}
+
+// 文字超出省略号
+.word-elip {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  word-break:break-all;
+  word-wrap: normal;
+}
+
+// 文字超出换行
+.word-break {
+  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-all;
+}
+
+.common-btn {
+  width:80px;
+  height:34px;
+  line-height: 34px;
+  background:rgba(247,248,252,1);
+  border:1px solid rgba(224,226,236,1);
+  border-radius:2px;
+  text-align: center;
+  margin-right: 10px;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  &.primary {
+    background: @primary-color;
+    color: #fff;
+    border: none;
+  }
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.mt(@value) when(@value > 0) {
+  .mt(@value - 1);
+  .mt@{value} {
+    margin-top: 1px * @value !important;
+  }
+}
+
+.mr(@value) when(@value > 0) {
+  .mr(@value - 1);
+
+  .mr@{value} {
+    margin-right: 1px * @value  !important;
+  }
+}
+
+.mb(@value) when(@value > 0) {
+  .mb(@value - 1);
+
+  .mb@{value} {
+    margin-bottom: 1px * @value  !important;
+  }
+}
+
+.ml(@value) when(@value > 0) {
+  .ml(@value - 1);
+
+  .ml@{value} {
+    margin-left: 1px * @value  !important;
+  }
+}
+
+.pt(@value) when(@value > 0) {
+  .pt(@value - 1);
+
+  .pt@{value} {
+    padding-top: 1px * @value  !important;
+  }
+}
+
+.pr(@value) when(@value > 0) {
+  .pr(@value - 1);
+
+  .pr@{value} {
+    padding-right: 1px * @value  !important;
+  }
+}
+
+.pb(@value) when(@value > 0) {
+  .pb(@value - 1);
+
+  .pb@{value} {
+    padding-bottom: 1px * @value  !important;
+  }
+}
+
+.pl(@value) when(@value > 0) {
+  .pl(@value - 1);
+
+  .pl@{value} {
+    padding-left: 1px * @value  !important;
+  }
+}
+
+.fz(@value) when(@value >= 9) {
+  .fz(@value - 1);
+
+  .fz@{value} {
+    font-size: 1px * @value  !important;
+  }
+}
+
+// .mt(100);
+// .mr(100);
+// .mb(100);
+// .ml(100);
+
+// .pt(100);
+// .pr(100);
+// .pb(100);
+// .pl(100);
+
+// .fz(32);
+
+.height (@height) {
+  height: calc(@height / 2160 * 100vh);
+}
+.lineHeight(@lineHeight) {
+  line-height: calc(@lineHeight / 2160 * 100vh);
+}
+.value (@val) {
+  @value: calc(@val / 2160 * 100vh);
+}
+.more (@val) {
+  @more: calc(@val / 2160 * 100vh);
+}

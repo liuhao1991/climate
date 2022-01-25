@@ -1,0 +1,26 @@
+// sidebar 与 @/js/global/variables.js变量保持一致。
+@menuText:#bfcbd9;
+@menuActiveText:#409EFF;
+@subMenuActiveText:#f4f4f5; //Detail see: https://github.com/ElemeFE/element/issues/12951
+
+@menuBg:#324157;
+@menuHover:#242F42;
+
+@subMenuBg:#1f2d3d;
+@subMenuHover:#001528;
+
+@sideBarWidth: 210px;
+
+// the :export directive is the magic sauce for webpack
+// Detail see: https://cli.vuejs.org/zh/guide/css.html#css-modules
+// 但是css.requireModuleExtension跟官方文档不一样，故文件名改格式来适配。
+:export {
+  menuText: @menuText;
+  menuActiveText: @menuActiveText;
+  subMenuActiveText: @subMenuActiveText;
+  menuBg: @menuBg;
+  menuHover: @menuHover;
+  subMenuBg: @subMenuBg;
+  subMenuHover: @subMenuHover;
+  sideBarWidth: @sideBarWidth;
+}
